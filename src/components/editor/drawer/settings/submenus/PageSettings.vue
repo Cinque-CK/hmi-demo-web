@@ -1,6 +1,6 @@
 <template>
 <div>
-  <menu-toggle menuHeader="General">
+  <menu-toggle menuHeader="通用">
     <dim-pos :height="h" :width="w" :hasPos="false"
       @change="({type, value}) => emitChanges(type, value)">
     </dim-pos>
@@ -13,7 +13,7 @@
         @change="currentValue => onStyleChanges('opacity', currentValue)">
       </slider>
 
-      <color-picker label="Background color"
+      <color-picker label="背景色"
         icon="system/editor/bg_color"
         :color="sty['background-color']"
         @input="newColor => onStyleChanges('background-color', newColor)">

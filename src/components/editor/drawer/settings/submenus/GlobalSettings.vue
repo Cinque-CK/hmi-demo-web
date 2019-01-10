@@ -1,6 +1,6 @@
 <template>
 <div>
-  <menu-toggle menuHeader="General">
+  <menu-toggle menuHeader="通用">
     <dim-pos :top="t" :bottom="b" :left="l" :right="r" :hasDim="false"
       @change="({type, value}) => emitChanges(type, value)">
     </dim-pos>

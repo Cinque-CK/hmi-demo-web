@@ -4,33 +4,33 @@
       <svgicon icon="system/actions/sync" width="24" height="24" color="rgba(0,0,0,.38)"></svgicon>
     </button>
 
-    <button v-tooltip="'Undo'" class="action-btn" :disabled="!canUndo" @click="$root.$emit('undo')">
+    <button v-tooltip="'撤销'" class="action-btn" :disabled="!canUndo" @click="$root.$emit('undo')">
       <svgicon icon="system/actions/undo" width="24" height="24"
         :color="canUndo ? '#2b6a73' : 'rgba(0,0,0,.38)'">
       </svgicon>
     </button>
 
-    <button v-tooltip="'Redo'" class="action-btn" :disabled="!canRedo" @click="$root.$emit('redo')">
+    <button v-tooltip="'恢复'" class="action-btn" :disabled="!canRedo" @click="$root.$emit('redo')">
       <svgicon icon="system/actions/redo" width="24" height="24"
         :color="canRedo ? '#2b6a73' : 'rgba(0,0,0,.38)'">
       </svgicon>
     </button>
 
     <router-link :to="{name: 'preview'}">
-      <button v-tooltip="'Preview'" class="action-btn">
+      <button v-tooltip="'预览'" class="action-btn">
         <svgicon icon="system/actions/preview" width="24" height="24" color="#2b6a73"></svgicon>
       </button>
     </router-link>
 
     <div class="separator"></div>
 
-    <button v-tooltip="'Clear project'" class="action-btn"
+    <button v-tooltip="'清空项目'" class="action-btn"
       :disabled="isLoading" @click="$root.$emit('open-confirm-dialog')">
       <svgicon icon="system/actions/delete" width="24" height="24" color="#2b6a73"></svgicon>
     </button>
 
     <mdc-menu-anchor>
-      <button v-tooltip="'Open...'" class="action-btn" :disabled="isLoading" @click="showLoadFromMenu">
+      <button v-tooltip="'打开...'" class="action-btn" :disabled="isLoading" @click="showLoadFromMenu">
         <svgicon icon="system/actions/folder" width="24" height="24" color="#2b6a73"></svgicon>
       </button>
       <mdc-menu ref="loadFromMenu" @select="onSelectLoadFrom">
@@ -45,7 +45,7 @@
     </mdc-menu-anchor>
 
     <mdc-menu-anchor>
-      <button v-tooltip="'Download...'" class="action-btn" :disabled="isLoading" @click="showDownloadMenu">
+      <button v-tooltip="'下载...'" class="action-btn" :disabled="isLoading" @click="showDownloadMenu">
         <svgicon icon="system/actions/download" width="24" height="24" color="#2b6a73"></svgicon>
       </button>
       <mdc-menu ref="downloadMenu" @select="onSelectDownload">

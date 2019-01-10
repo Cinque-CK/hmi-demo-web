@@ -3,12 +3,11 @@
     <div class="viewport-splash_wrapper">
       <div class="viewport-splash_content">
         <svgicon icon="product/vuegg" width="180" height="180" :original="true"></svgicon>
-        <h3>Sorry about that!</h3>
+        <h3>你的屏幕太小了!</h3>
         <p>
-          It looks like your screen is too small to use vuegg properly,
-          please increase your browser size or visit on a larger device.
+          你的屏幕太小了，无法使用OpenVision，请调整浏览器窗口大小或者更换设备。
         </p>
-        <p><b>NOTE</b>: As for today, vuegg does not support touch devices.</p>
+        <p><b>注意</b>: 目前尚不支持移动设备。</p>
       </div>
     </div>
     <router-view></router-view>

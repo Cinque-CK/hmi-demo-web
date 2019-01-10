@@ -1,6 +1,6 @@
 <template>
   <div class="menus-wrapper">
-    <menu-toggle menuHeader="Basic">
+    <menu-toggle menuHeader="基础组件">
       <div class="el-menu">
         <div class="el-menu__el" :key="element.name"
           v-for="element in elements"

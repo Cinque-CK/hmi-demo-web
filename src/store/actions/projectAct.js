@@ -17,7 +17,8 @@ const projectActions = {
  * (alternatives... check after certain time, if there's been changes?)
  */
   [types.checkLastSaved]: async function ({ state, dispatch, commit }) {
-    const currentProjectB64 = btoa(JSON.stringify(state.project))
+    console.log(JSON.stringify(state.project))
+    const currentProjectB64 = btoa(unescape(encodeURIComponent(JSON.stringify(state.project))));
     let lastSavedProjectB64 = await localforage.getItem('gh-last-saved')
 
     if (currentProjectB64 === lastSavedProjectB64) {

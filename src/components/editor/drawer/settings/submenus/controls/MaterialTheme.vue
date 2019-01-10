@@ -4,7 +4,7 @@
       <svgicon icon="system/editor/reset_color" width="22" height="22"
         @click.native="$emit('change', {prop: '--mdc-theme-primary', value: 'inherit'})">
       </svgicon>
-      <color-picker label="Primary color"
+      <color-picker label="主色"
         icon="system/editor/color"
         :color="primary" class="material-theme__color-picker"
         @input="newColor => $emit('change', {prop: '--mdc-theme-primary', value: newColor})">
@@ -15,7 +15,7 @@
       <svgicon icon="system/editor/reset_color" width="22" height="22"
         @click.native="$emit('change', {prop: '--mdc-theme-secondary', value: 'inherit'})">
       </svgicon>
-      <color-picker label="Secondary color"
+      <color-picker label="副色"
         icon="system/editor/color_2"
         :color="secondary" class="material-theme__color-picker"
         @input="newColor => $emit('change', {prop: '--mdc-theme-secondary', value: newColor})">
@@ -26,7 +26,7 @@
       <svgicon icon="system/editor/reset_color" width="22" height="22"
         @click.native="$emit('change', {prop: '--mdc-theme-background', value: 'inherit'})">
       </svgicon>
-      <color-picker label="Background color"
+      <color-picker label="背景色"
         icon="system/editor/bg_color"
         :color="background" class="material-theme__color-picker"
         @input="newColor => $emit('change', {prop: '--mdc-theme-background', value: newColor})">

@@ -6,6 +6,7 @@ const basicElements = [
   // DIV
   {
     'name': 'div',
+    'displayName': '区域',
     'type': 'div',
     'egglement': true,
     'containegg': true,
@@ -27,6 +28,7 @@ const basicElements = [
   // TABLE
   {
     'name': 'table',
+    'displayName': '表格',
     'type': 'table',
     'egglement': true,
     'wrappegg': true,
@@ -218,6 +220,7 @@ const basicElements = [
   // DATE
   {
     'name': 'date',
+    'displayName': '时间选择',
     'type': 'input',
     'egglement': true,
     'width': 200,
@@ -236,6 +239,7 @@ const basicElements = [
   // INPUT
   {
     'name': 'input',
+    'displayName': '文本框',
     'type': 'input',
     'egglement': true,
     'width': 300,
@@ -253,6 +257,7 @@ const basicElements = [
   // BUTTON
   {
     'name': 'button',
+    'displayName': '按钮',
     'type': 'button',
     'text': 'Button',
     'egglement': true,
@@ -269,6 +274,7 @@ const basicElements = [
   // CHECKBOX
   {
     'name': 'checkbox',
+    'displayName': '复选框',
     'type': 'input',
     'egglement': true,
     'width': 40,
@@ -283,6 +289,7 @@ const basicElements = [
   // RADIO
   {
     'name': 'radio',
+    'displayName': '单选框',
     'type': 'input',
     'egglement': true,
     'width': 40,
@@ -298,6 +305,7 @@ const basicElements = [
   // SELECT
   {
     'name': 'select',
+    'displayName': '下拉列表',
     'type': 'select',
     'egglement': true,
     'wrappegg': true,
@@ -353,6 +361,7 @@ const basicElements = [
   // LINK
   {
     'name': 'link',
+    'displayName': '链接',
     'type': 'a',
     'text': 'Link',
     'egglement': true,
@@ -372,6 +381,7 @@ const basicElements = [
   // TEXT
   {
     'name': 'text',
+    'displayName': '文字',
     'type': 'span',
     'text': 'Text',
     'egglement': true,
@@ -388,6 +398,7 @@ const basicElements = [
   // IMAGE
   {
     'name': 'image',
+    'displayName': '图片',
     'type': 'img',
     'egglement': true,
     'width': 50,

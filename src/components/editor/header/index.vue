@@ -1,11 +1,11 @@
 <template>
   <div class="headegg mdc-theme--background" :class="{'not-scrolled': scroll0}">
-    <a class="home-btn" href="https://vuegg.github.io/" target="_blank">
+    <!-- <a class="home-btn" href="https://vuegg.github.io/" target="_blank">
       <svgicon icon="product/vuegg" width="40" height="40" :original="true"></svgicon>
-    </a>
-
+    </a> -->
+    <img class="home-btn" src="../../../assets/logo.png" alt="openVision"/>
     <input class="title-input" v-model="tmpProjectTitle" @blur="onTitleBlur"
-      title="Project title" placeholder="Project title"/>
+      title="Project title" placeholder="项目名称"/>
 
     <div class="spacer"></div>
     <action-bar></action-bar>
@@ -100,7 +100,6 @@ export default {
 .home-btn {
   margin-right: 25px;
   border: none;
-  border-radius: 50%;
   padding: 0;
   background-color: transparent;
   outline: none;
