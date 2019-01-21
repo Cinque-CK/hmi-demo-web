@@ -17,7 +17,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import { uploadProjectToGH } from '@/store/types'
+import { uploadProjectToGH } from '../../../store/types'
 import dialogPolyfill from 'dialog-polyfill/dialog-polyfill'
 import localforage from 'localforage'
 

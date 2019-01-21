@@ -25,7 +25,7 @@
 <script>
 import cloneDeep from 'clone-deep'
 
-import MenuToggle from '@/components/editor/common/MenuToggle'
+import MenuToggle from '../../../../../components/editor/common/MenuToggle'
 import Slider from './controls/Slider'
 import StackOrder from './controls/StackOrder'
 import DimPos from './controls/DimPos'

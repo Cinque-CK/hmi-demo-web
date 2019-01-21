@@ -1,8 +1,8 @@
 import shortid from 'shortid'
-import types from '@/store/types'
-import newPage from '@/factories/pageFactory'
-import { compRef } from '@/factories/componentFactory'
-import { getExtGlobComps, setElId } from '@/helpers/recursiveMethods'
+import types from '../types'
+import newPage from '../../factories/pageFactory'
+import { compRef } from '../../factories/componentFactory'
+import { getExtGlobComps, setElId } from '../../helpers/recursiveMethods'
 
 const pageActions = {
 /**

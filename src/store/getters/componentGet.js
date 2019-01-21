@@ -1,4 +1,4 @@
-import types from '@/store/types'
+import types from '../types'
 
 const componentGetters = {
 /**

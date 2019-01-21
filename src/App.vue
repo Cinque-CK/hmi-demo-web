@@ -16,10 +16,10 @@
 
 <script>
 import { mapActions, mapMutations } from 'vuex'
-import { loadVueggProject } from '@/store/types'
-import redoundo from '@/mixins/redoundo'
+import { loadVueggProject } from './store/types'
+import redoundo from './mixins/redoundo'
 
-import '@/assets/icons/product/vuegg'
+import './assets/icons/product/vuegg'
 
 export default {
   name: 'app',

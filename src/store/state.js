@@ -1,4 +1,4 @@
-import newState from '@/factories/stateFactory'
+import newState from '../factories/stateFactory'
 
 /**
  * Vuex Store State

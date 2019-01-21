@@ -1,10 +1,10 @@
 import localforage from 'localforage'
 import * as download from 'downloadjs'
-import showSnackbar from '@/helpers/showSnackbar'
-import newState from '@/factories/stateFactory'
-import types from '@/store/types'
-import store from '@/store'
-import api from '@/api'
+import showSnackbar from '../../helpers/showSnackbar'
+import newState from '../../factories/stateFactory'
+import types from '../types'
+import store from '../../store'
+import api from '../../api'
 
 const projectActions = {
 /**
@@ -39,7 +39,7 @@ const projectActions = {
     commit(types._toggleIsSyncing, true)
 
     let pB64 = projectB64
-    if (!pB64) { pB64 = btoa(JSON.stringify(state.project)) }
+    if (!pB64) { pB64 = btoa(unescape(encodeURIComponent(JSON.stringify(state.project)))) }
 
     await localforage.setItem('local-checkpoint', pB64)
     commit(types._toggleIsSyncing, false)
@@ -59,7 +59,7 @@ const projectActions = {
     const owner = state.oauth.authenticatedUser.login
     // repoNameconst parsedRepoName = project.title.replace(/[^a-zA-Z0-9-_]+/g, '-')
 
-    const projectB64 = btoa(JSON.stringify(project))
+    const projectB64 = btoa(unescape(encodeURIComponent(JSON.stringify(project))))
     localforage.setItem('gh-last-saved', projectB64)
     localforage.setItem('gh-repo-name', repoName)
 
@@ -85,7 +85,7 @@ const projectActions = {
     commit(types._toggleLoadingStatus, true)
 
     const parsedRepoName = state.project.title.replace(/[^a-zA-Z0-9-_]+/g, '-')
-    const projectB64 = btoa(JSON.stringify(state.project))
+    const projectB64 = btoa(unescape(encodeURIComponent(JSON.stringify(state.project))))
     download(projectB64, parsedRepoName + '.gg', 'appliction/json')
 
     commit(types._toggleLoadingStatus, false)
@@ -139,7 +139,9 @@ const projectActions = {
     }
 
     if (project) {
-      store.replaceState(newState(JSON.parse(atob(project))))
+      const pJSON = decodeURIComponent(escape(atob(project)));
+      console.log(pJSON)
+      store.replaceState(newState(JSON.parse(pJSON)))
       commit(types.addProject)
       if (origin === 'github') localforage.setItem('gh-repo-name', repoName)
 

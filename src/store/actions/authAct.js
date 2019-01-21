@@ -1,7 +1,7 @@
 import localforage from 'localforage'
-import showSnackbar from '@/helpers/showSnackbar'
-import types from '@/store/types'
-import auth from '@/auth'
+import showSnackbar from '../../helpers/showSnackbar'
+import types from '../types'
+import auth from '../../auth'
 
 const authActions = {
 /**

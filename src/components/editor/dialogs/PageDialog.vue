@@ -20,7 +20,7 @@
 
 <script>
 import { mapState, mapGetters, mapActions, mapMutations } from 'vuex'
-import { pathInUse, nameInUse, savePageAndClose, _togglePageDialog } from '@/store/types'
+import { pathInUse, nameInUse, savePageAndClose, _togglePageDialog } from '../../../store/types'
 import dialogPolyfill from 'dialog-polyfill/dialog-polyfill'
 
 export default {

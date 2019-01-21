@@ -41,7 +41,7 @@ import cloneDeep from 'clone-deep'
 import Slider from './controls/Slider'
 import ColorPicker from './controls/ColorPicker'
 import MaterialTheme from './controls/MaterialTheme'
-import MenuToggle from '@/components/editor/common/MenuToggle'
+import MenuToggle from '../../../../../components/editor/common/MenuToggle'
 import DimPos from './controls/DimPos'
 
 export default {

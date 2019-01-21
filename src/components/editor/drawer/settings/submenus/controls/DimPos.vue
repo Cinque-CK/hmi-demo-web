@@ -37,7 +37,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import { getComputedProp } from '@/helpers/positionDimension'
+import { getComputedProp } from '../../../../../../helpers/positionDimension'
 
 export default {
   name: 'dim-pos',

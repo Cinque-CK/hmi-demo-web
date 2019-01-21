@@ -10,7 +10,7 @@
           @click="e => addItemToStage(e, element)"
         >
           <svgicon :icon="'system/elements/'+element.name" width="24" height="24" color="rgba(0,0,0,.87)"></svgicon>
-          <span>{{element.displayName || element.name}}</span>
+          <span>{{element.aliasName || element.name}}</span>
         </div>
       </div>
     </menu-toggle>
@@ -25,7 +25,7 @@
           @click="e => addItemToStage(e, mdComp)"
         >
           <svgicon :icon="'system/elements/'+mdComp.iconName" width="24" height="24" color="rgba(0,0,0,.87)"></svgicon>
-          <span>{{mdComp.displayName || mdComp.name}}</span>
+          <span>{{mdComp.aliasName || mdComp.name}}</span>
         </div>
       </div>
     </menu-toggle>
@@ -51,14 +51,14 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import { registerElement } from '@/store/types'
+import { registerElement } from '../../../../store/types'
 
-import basicElements from '@/assets/BasicElements'
-import materialComponents from '@/assets/MaterialComponents'
-// import mockComponents from '@/assets/MockComponents'
-import MenuToggle from '@/components/editor/common/MenuToggle'
+import basicElements from '../../../../assets/BasicElements'
+import materialComponents from '../../../../assets/MaterialComponents'
+// import mockComponents from '../../assets/MockComponents'
+import MenuToggle from '../../../../components/editor/common/MenuToggle'
 
-import '@/assets/icons/system/elements/'
+import '../../../../assets/icons/system/elements/'
 
 export default {
   name: 'elements-menu',

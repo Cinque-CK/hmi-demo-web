@@ -41,7 +41,7 @@
 <script>
 import cloneDeep from 'clone-deep'
 import { mapState, mapMutations } from 'vuex'
-import { updatePage, updateEgglement } from '@/store/types'
+import { updatePage, updateEgglement } from '../../../../store/types'
 
 import PageSettings from './submenus/PageSettings.vue'
 import ElementSettings from './submenus/ElementSettings.vue'
@@ -49,9 +49,9 @@ import ComponentSettings from './submenus/ComponentSettings.vue'
 import MdcSettings from './submenus/MdcSettings.vue'
 import GlobalSettings from './submenus/GlobalSettings.vue'
 
-import WebSafeFonts from '@/assets/WebSafeFonts'
-import '@/assets/icons/system/editor/'
-import '@/assets/icons/system/elements/'
+import WebSafeFonts from '../../../../assets/WebSafeFonts'
+import '../../../../assets/icons/system/editor/'
+import '../../../../assets/icons/system/elements/'
 
 export default {
   name: 'settings-menu',

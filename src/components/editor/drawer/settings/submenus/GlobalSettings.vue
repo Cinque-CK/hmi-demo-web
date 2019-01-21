@@ -16,7 +16,7 @@
 
 
 <script>
-import MenuToggle from '@/components/editor/common/MenuToggle'
+import MenuToggle from '../../../../../components/editor/common/MenuToggle'
 import StackOrder from './controls/StackOrder'
 import DimPos from './controls/DimPos'
 

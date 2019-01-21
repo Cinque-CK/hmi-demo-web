@@ -28,9 +28,9 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import { logIn, logOut } from '@/store/types'
+import { logIn, logOut } from '../../../store/types'
 
-import '@/assets/icons/system/gh_logo'
+import '../../../assets/icons/system/gh_logo'
 
 export default {
   name: 'user-menu',

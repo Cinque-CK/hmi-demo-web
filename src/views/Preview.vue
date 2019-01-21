@@ -46,15 +46,15 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-import { _changeActivePage } from '@/store/types'
+import { _changeActivePage } from '../store/types'
 
-import PrevStage from '@/components/preview/PrevStage'
+import PrevStage from '../components/preview/PrevStage'
 
-import '@/assets/icons/system/page'
-import '@/assets/icons/system/close'
-import '@/assets/icons/system/dev_lg'
-import '@/assets/icons/system/dev_md'
-import '@/assets/icons/system/dev_sm'
+import '../assets/icons/system/page'
+import '../assets/icons/system/close'
+import '../assets/icons/system/dev_lg'
+import '../assets/icons/system/dev_md'
+import '../assets/icons/system/dev_sm'
 
 export default {
   name: 'preview',

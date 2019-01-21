@@ -16,12 +16,12 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-import { updateProject } from '@/store/types'
+import { updateProject } from '../../../store/types'
 
 import UserMenu from './UserMenu'
 import ActionBar from './ActionBar'
 
-import '@/assets/icons/product/vuegg'
+import '../../../assets/icons/product/vuegg'
 
 export default {
   name: 'headegg',

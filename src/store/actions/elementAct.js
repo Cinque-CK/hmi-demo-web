@@ -1,7 +1,7 @@
-import types from '@/store/types'
-import componentFactory from '@/factories/componentFactory'
-import { setElId, getChildNode, calcRelativePoint } from '@/helpers/recursiveMethods'
-import { fixElementToParentBounds, getComputedProp } from '@/helpers/positionDimension'
+import types from '../types'
+import componentFactory from '../../factories/componentFactory'
+import { setElId, getChildNode, calcRelativePoint } from '../../helpers/recursiveMethods'
+import { fixElementToParentBounds, getComputedProp } from '../../helpers/positionDimension'
 
 const elementActions = {
 /**

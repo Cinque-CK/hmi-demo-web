@@ -1,5 +1,5 @@
 import cloneDeep from 'clone-deep'
-import { checkLastSaved, _toggleCanUndo, _toggleCanRedo } from '@/store/types'
+import { checkLastSaved, _toggleCanUndo, _toggleCanRedo } from '../store/types'
 
 const MAX_HISTORY = 250
 

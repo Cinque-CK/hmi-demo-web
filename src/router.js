@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Editor from '@/views/Editor'
-import Preview from '@/views/Preview'
-import NotFound from '@/views/404'
+import Editor from './views/Editor'
+import Preview from './views/Preview'
+import NotFound from './views/404'
 
 Vue.use(Router)
 

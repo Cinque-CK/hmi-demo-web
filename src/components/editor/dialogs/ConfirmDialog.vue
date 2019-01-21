@@ -16,7 +16,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import { clearProject } from '@/store/types'
+import { clearProject } from '../../../store/types'
 import dialogPolyfill from 'dialog-polyfill/dialog-polyfill'
 
 export default {

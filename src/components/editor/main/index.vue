@@ -8,9 +8,9 @@
 
 <script>
 import { mapState, mapGetters, mapMutations } from 'vuex'
-import { _changeActivePage, _rebaseActivePage, _updateEditorZoom, getPageIndexById } from '@/store/types'
+import { _changeActivePage, _rebaseActivePage, _updateEditorZoom, getPageIndexById } from '../../../store/types'
 
-import ZoomMenu from '@/components/editor/common/ZoomMenu'
+import ZoomMenu from '../../../components/editor/common/ZoomMenu'
 import Stage from './Stage'
 
 export default {

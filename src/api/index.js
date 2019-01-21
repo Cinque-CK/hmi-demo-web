@@ -11,7 +11,7 @@ import axios from 'axios'
  */
 async function saveVueggProject (project, owner, repo, token) {
   try {
-    return await axios.post('/api/project', { project, owner, repo, token })
+    return await axios.post('http://localhost:5000/api/project', { project, owner, repo, token })
   } catch (e) {
     console.error(e)
     return false
@@ -28,7 +28,7 @@ async function saveVueggProject (project, owner, repo, token) {
  */
 async function getVueggProject (owner, repo, token) {
   try {
-    return await axios.get('/api/project', { params: { owner, repo, token } })
+    return await axios.get('http://localhost:5000/api/project', { params: { owner, repo, token } })
   } catch (e) {
     console.error(e)
     return false
@@ -43,7 +43,7 @@ async function getVueggProject (owner, repo, token) {
  */
 async function generateVueSources (project) {
   try {
-    return await axios.post('/api/generate', project, {responseType: 'blob'})
+    return await axios.post('http://localhost:5000/api/generate', project, {responseType: 'blob'})
   } catch (e) {
     console.error(e)
     return false

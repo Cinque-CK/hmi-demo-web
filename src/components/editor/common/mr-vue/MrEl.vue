@@ -2,7 +2,7 @@
   <div data-mr-el="true"
     class="mr-el"
     :style="style"
-    @mousedown="e => $emit('activated', e)"
+    @mousedown.exact="e => $emit('activated', e)"
     @mousedown.meta.capture="e => $emit('activated', e)"
     @mousedown.ctrl.capture="e => $emit('activated', e)"
   >
@@ -17,7 +17,7 @@
       class="handle" :class="handle"
       :style="{ display: active ? 'block' : 'none'}">
     </div>
-    <div v-if="!resizable"
+    <div v-else
       class="selection-box"
       :style="{ display: active ? 'block' : 'none'}">
     </div>

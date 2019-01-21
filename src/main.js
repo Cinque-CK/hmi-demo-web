@@ -28,8 +28,19 @@ Vue.use(Tooltip, {
 
 Vue.config.productionTip = false
 
-new Vue({
-  router,
+// new Vue({
+//   router,
+//   store,
+//   render: h => h(App)
+// }).$mount('#app')
+
+
+const vm = new Vue({
+  el: '#app',
   store,
-  render: h => h(App)
-}).$mount('#app')
+  router,
+  template: '<App/>',
+  components: { App }
+})
+
+export default vm

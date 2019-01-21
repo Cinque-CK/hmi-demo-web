@@ -23,16 +23,16 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import { checkAuth, checkLastSaved, rebaseSelectedElements } from '@/store/types'
+import { checkAuth, checkLastSaved, rebaseSelectedElements } from '../store/types'
 
-import Headegg from '@/components/editor/header'
-import Drawegg from '@/components/editor/drawer'
-import Mainegg from '@/components/editor/main'
-import BlockLoader from '@/components/editor/common/loader/BlockLoader'
-import PageDialog from '@/components/editor/dialogs/PageDialog'
-import LoadDialog from '@/components/editor/dialogs/LoadDialog'
-import UploadDialog from '@/components/editor/dialogs/UploadDialog'
-import ConfirmDialog from '@/components/editor/dialogs/ConfirmDialog'
+import Headegg from '../components/editor/header'
+import Drawegg from '../components/editor/drawer'
+import Mainegg from '../components/editor/main'
+import BlockLoader from '../components/editor/common/loader/BlockLoader'
+import PageDialog from '../components/editor/dialogs/PageDialog'
+import LoadDialog from '../components/editor/dialogs/LoadDialog'
+import UploadDialog from '../components/editor/dialogs/UploadDialog'
+import ConfirmDialog from '../components/editor/dialogs/ConfirmDialog'
 
 export default {
   name: 'editor',

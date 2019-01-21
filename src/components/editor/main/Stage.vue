@@ -32,14 +32,14 @@
 
 <script>
 import cloneDeep from 'clone-deep'
-import elementsFromPoint from '@/polyfills/elementsFromPoint'
-import { getComputedProp, fixElementToParentBounds } from '@/helpers/positionDimension'
+import elementsFromPoint from '../../../polyfills/elementsFromPoint'
+import { getComputedProp, fixElementToParentBounds } from '../../../helpers/positionDimension'
 
 import { mapState, mapActions, mapMutations } from 'vuex'
 import { _clearSelectedElements, _addSelectedElements, registerElement,
-        removeElement, resizeElement, moveElement, rebaseSelectedElements } from '@/store/types'
+        removeElement, resizeElement, moveElement, rebaseSelectedElements } from '../../../store/types'
 
-import MrContainer from '@/components/editor/common/mr-vue/MrContainer'
+import MrContainer from '../../../components/editor/common/mr-vue/MrContainer'
 import StageEl from './StageEl'
 
 const DROP_BORDER = {

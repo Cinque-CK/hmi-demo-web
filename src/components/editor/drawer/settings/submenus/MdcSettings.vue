@@ -31,7 +31,7 @@
 
   <menu-toggle menuHeader="Material props" :hidden="!Object.keys(att).length">
     <div class="menu">
-      <div v-for="(item, key, index) in att" :key="key">
+      <div v-for="(item, key) in att" :key="key">
         <mdc-checkbox v-if="typeof item === 'boolean'"
           class="text-item"
           :label="key" v-model="att[key]"
@@ -102,9 +102,9 @@
 
 <script>
 import cloneDeep from 'clone-deep'
-import WebSafeFonts from '@/assets/WebSafeFonts'
+import WebSafeFonts from '../../../../../assets/WebSafeFonts'
 
-import MenuToggle from '@/components/editor/common/MenuToggle'
+import MenuToggle from '../../../../../components/editor/common/MenuToggle'
 import Slider from './controls/Slider'
 import IconSelect from './controls/IconSelect'
 import ColorPicker from './controls/ColorPicker'

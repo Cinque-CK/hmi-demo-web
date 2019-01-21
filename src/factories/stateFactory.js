@@ -21,7 +21,7 @@ function newState (project) {
       isAuthorized: false,
       authenticatedUser: null
     },
-    project: project || newProject('我的项目')
+    project: project || newProject('My Project')
   }
 }
 
