@@ -268,7 +268,8 @@ const basicElements = [
       'overflow': 'hidden',
       'text-overflow': 'ellipsis'
     },
-    'classes': {}
+    'classes': {},
+    'jump': ''
   },
 
   // CHECKBOX

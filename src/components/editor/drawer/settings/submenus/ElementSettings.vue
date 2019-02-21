@@ -135,6 +135,20 @@
       </color-picker>
     </div>
   </menu-toggle>
+  <menu-toggle menuHeader="点击跳转">
+    <div class="menu">
+      <icon-select class="text-item" :value="j"
+                   :icon="'system/editor/border'" label="跳转页面"
+                   @change="newValue => emitChanges('jump', newValue)"
+      >
+        <option value="">All borders</option>
+        <option value="-top">Top</option>
+        <option value="-bottom">Bottom</option>
+        <option value="-left">Left</option>
+        <option value="-right">Right</option>
+      </icon-select>
+    </div>
+  </menu-toggle>
 </div>
 </template>
 
@@ -155,7 +169,7 @@ import DimPos from './controls/DimPos'
 export default {
   name: 'element-settings',
   components: { MenuToggle, Slider, IconSelect, ColorPicker, StackOrder, TextAlign, FontStyle, DimPos },
-  props: ['height', 'width', 'top', 'left', 'bottom', 'right', 'zIndex', 'text', 'styles', 'attrs'],
+  props: ['height', 'width', 'top', 'left', 'bottom', 'right', 'zIndex', 'text', 'styles', 'attrs', 'jump'],
   data: function () {
     return {
       h: this.height,
@@ -169,7 +183,8 @@ export default {
       sty: cloneDeep(this.styles),
       att: cloneDeep(this.attrs),
       fonts: WebSafeFonts,
-      borderSelected: ''
+      borderSelected: '',
+      j: this.jump
     }
   },
   watch: {
@@ -182,7 +197,8 @@ export default {
     'zIndex' (val) { this.z = val },
     'text' (val) { this.txt = val },
     'styles' (val) { this.sty = cloneDeep(val) },
-    'attrs' (val) { this.att = cloneDeep(val) }
+    'attrs' (val) { this.att = cloneDeep(val) },
+    'jump' (val) { this.j = val },
   },
   computed: {
     hideTextSettings () {

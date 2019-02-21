@@ -25,8 +25,9 @@
               <svgicon icon="system/more_vert" width="24" height="24" @click.native="showOptsMenu(page)"></svgicon>
 
               <mdc-menu :ref="'menu-'+page.id" @select="(selected)=>onSelect(selected, pageIndex)">
-                <mdc-menu-item>Rename page</mdc-menu-item>
-                <mdc-menu-item>Duplicate page</mdc-menu-item>
+                <mdc-menu-item>编辑页面</mdc-menu-item>
+                <mdc-menu-item>复制页面</mdc-menu-item>
+                <mdc-menu-item>添加子页面</mdc-menu-item>
                 <mdc-menu-divider></mdc-menu-divider>
                 <mdc-menu-item :disabled="(projectPages.length === 1)">Delete page</mdc-menu-item>
               </mdc-menu>

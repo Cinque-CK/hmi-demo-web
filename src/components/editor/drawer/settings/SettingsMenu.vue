@@ -24,7 +24,7 @@
     <element-settings v-if="(selectionType === 'element')"
       :top="top" :left="left" :bottom="bottom" :right="right"
       :zIndex="zIndex" :height="height" :width="width"
-      :text="text" :styles="styles" :attrs="attrs"
+      :text="text" :styles="styles" :attrs="attrs" :jump="jump"
       @propchange="onPropChange">
     </element-settings>
 
@@ -69,7 +69,8 @@ export default {
       attrs: {},
       styles: {},
       classes: {},
-      webSafeFonts: WebSafeFonts
+      webSafeFonts: WebSafeFonts,
+      jump: ''
     }
   },
   computed: {
@@ -149,6 +150,10 @@ export default {
     ...mapMutations([updatePage, updateEgglement])
   },
   watch: {
+    /**
+     * 选中编辑器中的一个元素
+     * @param val
+     */
     'selectedItem': function (val) {
       if (val !== null) {
         if (Array.isArray(val)) {
@@ -167,6 +172,7 @@ export default {
           this.attrs = (val.attrs) ? cloneDeep(val.attrs) : {}
           this.styles = (val.styles) ? cloneDeep(val.styles) : {}
           this.classes = (val.classes) ? cloneDeep(val.classes) : {}
+          this.jump = (val.jump) ? val.jump : ''
         }
       }
     }
